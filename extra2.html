@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <div style="text-align: center; font-size: 50px"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci fugit perferendis sunt.</div>
+    <button style="margin-top: 25px; border-radius: 10px; background-color: #e7e685; color: black; border-color: #e7e685; width: 500px; height: 60px; position: absolute; left: 50%; transform: translateX(-50%);" id="btn" > change color</button>
+    <body>
+
+
+    <script>
+        const btn = document.getElementById("btn");
+        btn.style.fontSize = "20px";
+        btn.style.letterSpacing = "10px";
+
+        const div = document.querySelector('div');
+        const button = document.querySelector('button');
+        button.onclick = function (){
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        div.style.color = '#' + randomColor
+        }
+    </script>
+</body>
+</html>
